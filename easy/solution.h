@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <string>
 using namespace std;
 
 class Solution {
@@ -34,5 +35,8 @@ public:
 
     // Problem 1512. Number of Good Pairs
     int numberOfGoodPairs(const vector<int>& nums);
+
+    // Problem 1528. Shuffle String
+    string restoreString(const string& s, const vector<int>& indices);
 
 };

@@ -182,3 +182,12 @@ int Solution::numberOfGoodPairs(const vector<int>& nums){
     return res; 
 }
 
+// Problem 1528. Shuffle String
+string Solution::restoreString(const string& s, const vector<int>& indices){
+    vector<char> res(indices.size());
+    for(int i = 0; i < indices.size(); ++i){
+        res[indices[i]] = s[i];
+    }
+    return string(res.begin(), res.end());
+}
+

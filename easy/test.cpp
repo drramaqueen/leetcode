@@ -192,3 +192,21 @@ BOOST_AUTO_TEST_CASE( numberOfGoodPairs_test ){
      res = sol.numberOfGoodPairs(vector({1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}));
     BOOST_CHECK_EQUAL(res, 153);
 }
+
+BOOST_AUTO_TEST_CASE( restoreString_test ){
+    Solution sol;
+    auto res = sol.restoreString("codeleet", vector({4,5,6,7,0,2,1,3}));
+    BOOST_CHECK_EQUAL(res, "leetcode");
+
+    res = sol.restoreString("abc", vector({0,1,2}));
+    BOOST_CHECK_EQUAL(res, "abc");
+
+    res = sol.restoreString("aiohn", vector({3,1,4,2,0}));
+    BOOST_CHECK_EQUAL(res, "nihao");
+
+    res = sol.restoreString("aaiougrt", vector({4,0,2,6,7,3,1,5}));
+    BOOST_CHECK_EQUAL(res, "arigatou");
+
+    res = sol.restoreString("art", vector({1,0,2}));
+    BOOST_CHECK_EQUAL(res, "rat");
+}
